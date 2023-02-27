@@ -1,0 +1,4 @@
+To enhance the system architecture 3 message passing strategies included as follows:
+* gRPC : gRPC takes advantage of the HTTP/2 protocol, that can significantly improve system performance with regards to response sizes and overhead of connections(attendees number would be significantly large ). 
+* Kafka: as it is a special type of message queue that is often used to handle large volumes of data generated continuously as events( attendees location would change and should be updated).
+* REST: would be used to get/update the date from the front, REST is simple and straightforward and already integrated with the frontend, we may need to change /extend it.
