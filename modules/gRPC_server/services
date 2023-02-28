@@ -18,4 +18,4 @@ def save_location(location_data):
     kafka_data = json.dumps(location_data).encode()
     # Kafka producer has already been set up in Flask context
     kafka_producer = producer
-    kafka_producer.send("locations", kafka_data)
+    kafka_producer.send(TOPIC_NAME, kafka_data)
