@@ -1,0 +1,32 @@
+To create location gRPC messge passing stratigy is used, location message is descriped as follows:
+
+message LocationMessage {
+    int32 person_id = 1;
+    string latitude = 2;
+    string longitude = 3;
+}
+
+to send a message a write could be placed in gRPC_server module to use generated files, the writer code :
+
+import grpc
+import location_pb2
+import location_pb2_grpc
+
+"""
+Sample implementation of a writer that can be used to write messages to gRPC.
+"""
+
+print("Sending sample payload...")
+
+channel = grpc.insecure_channel("localhost:30005")
+stub = location_pb2_grpc.ItemServiceStub(channel)
+
+# Update this with desired payload
+location = location_pb2.ItemMessage(
+    person_id=10
+    latitude= "-122.30",
+    longitude="37.6"
+)
+
+
+response = stub.Create(item)
