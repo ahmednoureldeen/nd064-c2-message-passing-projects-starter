@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "e2c9cd26-292d-46a5-9e79-7b58d2ab7cc9",
+		"name": "Persons",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26121859"
+	},
+	"item": [
+		{
+			"name": "Get Persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:30002/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30002",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_name\": \"Freelancer\",\r\n    \"first_name\": \"Ahmed\",\r\n    \"id\": 10,\r\n    \"last_name\": \"Nour Eldeen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30002/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30002",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creation_time\": \"2023-07-07T10:37:06\",\r\n    \"id\": 100,\r\n    \"latitude\": \"-122.30\",\r\n    \"longitude\": \"37.6\",\r\n    \"person_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30001/api/locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30001",
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
