@@ -4,8 +4,8 @@ import os
 from kafka import KafkaProducer
 
 
-TOPIC_NAME = os.environ["TOPIC_NAME"]
-KAFKA_SERVER = os.environ["KAFKA_SERVER"]
+TOPIC_NAME = "udaconnect-kafka-0.udaconnect-kafka-headless.default.svc.cluster.local:9092" #os.environ["TOPIC_NAME"]
+KAFKA_SERVER = "test" #os.environ["KAFKA_SERVER"]
 
 producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER)
 
